@@ -465,7 +465,7 @@ recipient_delimiter = <%= @recipient_delimiter %>
 <% if @home_mailbox -%>
 home_mailbox = <%= @home_mailbox %>
 <% end -%>
-
+ 
 # The mail_spool_directory parameter specifies the directory where
 # UNIX-style mailboxes are kept. The default setting depends on the
 # system type.
@@ -516,6 +516,8 @@ mailbox_command = <%= @mailbox_command %>
 # the main.cf file, otherwise the SMTP server will reject mail for    
 # non-UNIX accounts with "User unknown in local recipient table".
 #
+# Cyrus IMAP over LMTP. Specify ``lmtpunix      cmd="lmtpd"
+# listen="/var/imap/socket/lmtp" prefork=0'' in cyrus.conf.
 #mailbox_transport = lmtp:unix:/var/lib/imap/socket/lmtp
 
 # If using the cyrus-imapd IMAP server deliver local mail to the IMAP
@@ -538,7 +540,8 @@ mailbox_command = <%= @mailbox_command %>
 # how many simultaneous LMTP sessions will be permitted to the Cyrus
 # message store. 
 #
-# To use the old cyrus deliver program you have to set:
+# Cyrus IMAP via command line. Uncomment the "cyrus...pipe" and
+# subsequent line in master.cf.
 #mailbox_transport = cyrus
 
 # The fallback_transport specifies the optional transport in master.cf
@@ -580,7 +583,7 @@ mailbox_command = <%= @mailbox_command %>
 #luser_relay = $user@other.host
 #luser_relay = $local@other.host
 #luser_relay = admin+$local
-
+  
 # JUNK MAIL CONTROLS
 # 
 # The controls listed here are only a very small subset. The file
