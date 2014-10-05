@@ -1,0 +1,13 @@
+{
+  "name": "llange-postfix",
+  "version": "0.3.3",
+  "author": "(Matthias Saou and others) Ludovic LANGE",
+  "summary": "Postfix Mail Transport Agent module",
+  "license": "Apache 2.0",
+  "source": "https://github.com/llange/puppet-postfix",
+  "project_page": "https://github.com/llange/puppet-postfix",
+  "issues_url": "https://github.com/llange/puppet-postfix/issues",
+  "description": "Install, enable and configure a complete Postfix Mail Transport Agent instance.",
+  "dependencies": [
+  ]
+}
